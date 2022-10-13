@@ -15,7 +15,7 @@ Details for Milestone are available on Canvas (left sidebar, Course Project).
 ## Team Members
 - Jordan P : I enjoy building computers and going to gym!
 - Jordan R : Hi, I'm Jordan and I enjoy playing guitar and cars, only bricked a linux install once though.
-- Talon L : I enjoy photography and bricking Linux installations once a year.
+- Talon L : I enjoy photography and bricking Linux installations once a year!
 
 ## Images
 
