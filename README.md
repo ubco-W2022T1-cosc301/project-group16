@@ -23,11 +23,8 @@ The dataset `Film or Digital` was compiled by `The Pudding` and focuses on compa
 
 ## Images
 
-<img src ="images/test.png" width="100px">
 
 ## References
-
-{Add your credits, acknowledgements, references, or citations **including a link to the data source** here}  
 [Data Source: The Pudding - Film or Digital](https://github.com/the-pudding/data/tree/master/filmordigital)
 
 
