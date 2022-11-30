@@ -33,3 +33,22 @@ def load_and_process(url_or_path_to_csv_file):
     
     # Make sure to return the latest dataframe
     return df2 
+
+# Method Chain for Popular Formats
+def get_popular_formats(df_clean):
+    # Grab Initial Counts
+    i = (
+        df_clean
+        .groupby('negative_format')
+        .size()
+        .reset_index(name='count')
+    )
+    # Filter out Data to prevent overplotting
+    i = i[i['count']>80]
+    # Sort and Return
+    i = (
+        i
+        .sort_values(by=['count'], ascending=False)
+        .reset_index(drop=True)
+    )
+    return i
