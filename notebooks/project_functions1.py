@@ -15,8 +15,7 @@ def load_and_process(url_or_path_to_csv_file):
     df1 = (
         pd.read_csv(url_or_path_to_csv_file)
         .rename(columns={"production_year": "year"})
-        .merge(pd.read_csv("../data/raw/top_movies.csv"), on=['id'], how="left", suffixes=('', '_y'))
-        .loc[:, ["director", "negative_format", "year", "budget", "genres", "film_type"]]
+        .loc[:, ["directors", "negative_format", "year", "budget", "genres", "film_type"]]
     )
     
     # Method Chain 2 (Create new columns, drop others, and do processing)
@@ -52,7 +51,7 @@ def get_popular_formats(df_clean):
     return i
 # Function for Mean Budget
 def camera_mean_budget(df_clean):
-    df_d = df_clean.groupby(by=['negative_format']).mean()
+    df_d = df_clean.groupby(by=['negative_format']).mean(numeric_only=True)
     df_d = df_d.dropna()
     df_d = df_d.reset_index()
     df_d = df_d[df_d["budget"]>100869747]
