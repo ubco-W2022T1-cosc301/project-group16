@@ -15,7 +15,7 @@ def load_and_process(url_or_path_to_csv_file):
     df1 = (
         pd.read_csv(url_or_path_to_csv_file)
         .rename(columns={"production_year": "year"})
-        .loc[:, ["directors", "negative_format", "year", "budget", "genres", "film_type"]]
+        .loc[:, ["negative_format", "year", "budget", "genres", "film_type"]]
     )
     
     # Method Chain 2 (Create new columns, drop others, and do processing)
