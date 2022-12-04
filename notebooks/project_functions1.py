@@ -49,6 +49,7 @@ def get_popular_formats(df_clean):
         .reset_index(drop=True)
     )
     return i
+
 # Function for Mean Budget
 def camera_mean_budget(df_clean):
     df_d = df_clean.groupby(by=['negative_format']).mean(numeric_only=True)
